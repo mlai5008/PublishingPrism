@@ -1,0 +1,119 @@
+﻿<UserControl x:Class="Publisher.Views.Views.DialogViews.DialogView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             xmlns:mvvm="http://prismlibrary.com/"
+             mvvm:ViewModelLocator.AutoWireViewModel="True"
+             Height="320"
+             Width="550">
+    <Grid Margin="6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0"
+                    Grid.Column="0"
+                    Margin="6"
+                    HorizontalAlignment="Stretch">
+            <TextBlock FontSize="14"
+                       FontWeight="Bold"
+                       Text="Title"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Margin="0,0,0,8"/>
+            <TextBox Text="{Binding TitleBook, UpdateSourceTrigger=PropertyChanged}"
+                       FontSize="16"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1"
+                    Grid.Column="0"
+                    Margin="6"
+                    HorizontalAlignment="Stretch">
+            <TextBlock FontSize="14"
+                       FontWeight="Bold"
+                       Text="Author"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Margin="0,0,0,8"/>
+            <TextBox Text="{Binding Author, UpdateSourceTrigger=PropertyChanged}"
+                     FontSize="16"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2"
+                    Grid.Column="0"
+                    Margin="6"
+                    HorizontalAlignment="Stretch">
+            <TextBlock FontSize="14"
+                       FontWeight="Bold"
+                       Text="Publisher"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Margin="0,0,0,8"/>
+            <TextBox Text="{Binding Publisher, UpdateSourceTrigger=PropertyChanged}"
+                     FontSize="16"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="0"
+                    Grid.Column="1"
+                    Margin="6"
+                    HorizontalAlignment="Stretch">
+            <TextBlock FontSize="14"
+                       FontWeight="Bold"
+                       Text="Released"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Margin="0,0,0,8"/>
+            <TextBox Text="{Binding Released, UpdateSourceTrigger=PropertyChanged}"
+                     FontSize="16"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="6"
+                    HorizontalAlignment="Stretch">
+            <TextBlock FontSize="14"
+                       FontWeight="Bold"
+                       Text="ISBN"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Margin="0,0,0,8"/>
+            <TextBox Text="{Binding Isbn, UpdateSourceTrigger=PropertyChanged}"
+                     FontSize="16"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2"
+                    Grid.Column="1"
+                    Margin="6"
+                    HorizontalAlignment="Stretch">
+            <TextBlock FontSize="14"
+                       FontWeight="Bold"
+                       Text="Description"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Margin="0,0,0,8"/>
+            <TextBox Text="{Binding Description, UpdateSourceTrigger=PropertyChanged}"
+                     FontSize="12" TextWrapping="Wrap"/>
+        </StackPanel>
+
+        <Button Grid.Row="3"
+                Grid.Column="0"
+                Content="OK"
+                Width="150"
+                Height="30"
+                Command="{Binding OkDialogCommand}"/>
+        <Button Grid.Row="3"
+                Grid.Column="1"
+                Content="Cancel"
+                Width="150"
+                Height="30"
+                Command="{Binding CancelCommand}"/>
+    </Grid>
+</UserControl>

@@ -1,0 +1,18 @@
+﻿<Window x:Class="Publisher.Views.Views.DialogWindow.ShowDialogWindowView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Publisher.Views"
+        xmlns:prism="http://prismlibrary.com/"
+        mc:Ignorable="d"
+        Title="{Binding Title}" 
+        Background="LightSteelBlue"
+        Style="{DynamicResource Style_Window_Dialog}"
+        SizeToContent="WidthAndHeight"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="10">
+        
+    </Grid>
+</Window>

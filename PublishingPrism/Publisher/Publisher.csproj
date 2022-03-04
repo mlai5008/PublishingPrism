@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Prism.Core" Version="8.1.97" />
+    <PackageReference Include="Prism.Unity" Version="8.1.97" />
+    <PackageReference Include="Prism.Wpf" Version="8.1.97" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Publisher.Services\Publisher.Services.csproj" />
+    <ProjectReference Include="..\Publisher.ViewModels\Publisher.ViewModels.csproj" />
+    <ProjectReference Include="..\Publisher.Views\Publisher.Views.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="ConPass.Client.Infrastructure">
+      <HintPath>C:\Users\haritonchik-yn\Desktop\Cashe\DLL\ConPass.Client.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="ConPass.Client.Resources">
+      <HintPath>C:\Users\haritonchik-yn\Desktop\Cashe\DLL\ConPass.Client.Resources.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
