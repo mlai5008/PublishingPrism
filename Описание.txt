@@ -1,0 +1,6 @@
+Решение включает 4 проекта(У Shell(Publisher) есть прямые ссылки на Publisher.Views и Publisher.ViewModels)
+Реализовано Prism 8
+Каждый проект содержит модули со всеми регистрациями в контейнер
+Модули регистрируются в App
+Реализовано использование DialogViews (создаем только UserControl и подбрасываем в Window от Prism 8)
+Реализовано использование DialogWindow (создаем UserControl и Window везде можно применить стили)
